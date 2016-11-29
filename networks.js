@@ -34,7 +34,7 @@ var hex = function(hex) {
 };*/
 exports.livenet = {
   name: 'livenet',
-  magic: hex('0xfaceb5e9'),
+  magic: hex('faceb5e9'),
   addressVersion: 61,
   privKeyVersion: 0xbd,
   P2SHVersion: 123,
