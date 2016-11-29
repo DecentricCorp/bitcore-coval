@@ -4,7 +4,7 @@ var hex = function(hex) {
   return new Buffer(hex, 'hex');
 };
 
-exports.livenet = {
+/*exports.livenet = {
   name: 'livenet',
   magic: hex('f9beb4d9'),
   addressVersion: 0x00,
@@ -31,6 +31,29 @@ exports.livenet = {
     'bitseed.xf2.org'
   ],
   defaultClientPort: 8333
+};*/
+exports.livenet = {
+  name: 'livenet',
+  magic: hex('0xfaceb5e9'),
+  addressVersion: 61,
+  privKeyVersion: 0xbd,
+  P2SHVersion: 123,
+  hkeyPublicVersion: 0x3764724C,
+  hkeyPrivateVersion: 0x37642686,
+  genesisBlock: {
+    hash: hex('0ecfdfbf02cfea31e6ca18fde777796e52afb0618d584bf9369889c35c030000'),
+    //merkle_root: hex('3BA3EDFD7A7B12B27AC72C3E67768F617FC81BC3888A51323A9FB8AA4B1E5E4A'),
+    height: 0,
+    //nonce: 2083236893,
+    //version: 1,
+    prev_hash: buffertools.fill(new Buffer(32), 0),
+    //timestamp: 1231006505,
+    //bits: 486604799,
+  },
+  dnsSeeds: [
+    '104.131.226.147'
+  ],
+  defaultClientPort: 3764
 };
 
 exports.mainnet = exports.livenet;
