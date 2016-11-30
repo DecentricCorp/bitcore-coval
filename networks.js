@@ -4,66 +4,38 @@ var hex = function(hex) {
   return new Buffer(hex, 'hex');
 };
 
-/*exports.livenet = {
-  name: 'livenet',
-  magic: hex('f9beb4d9'),
-  addressVersion: 0x00,
-  privKeyVersion: 128,
-  P2SHVersion: 5,
-  hkeyPublicVersion: 0x0488b21e,
-  hkeyPrivateVersion: 0x0488ade4,
-  genesisBlock: {
-    hash: hex('6FE28C0AB6F1B372C1A6A246AE63F74F931E8365E15A089C68D6190000000000'),
-    merkle_root: hex('3BA3EDFD7A7B12B27AC72C3E67768F617FC81BC3888A51323A9FB8AA4B1E5E4A'),
-    height: 0,
-    nonce: 2083236893,
-    version: 1,
-    prev_hash: buffertools.fill(new Buffer(32), 0),
-    timestamp: 1231006505,
-    bits: 486604799,
-  },
-  dnsSeeds: [
-    'seed.bitcoin.sipa.be',
-    'dnsseed.bluematt.me',
-    'dnsseed.bitcoin.dashjr.org',
-    'seed.bitcoinstats.com',
-    'seed.bitnodes.io',
-    'bitseed.xf2.org'
-  ],
-  defaultClientPort: 8333
-};*/
 exports.livenet = {
-  name: 'livenet',
-  magic: hex('faceb5e9'),
-  addressVersion: 61,
-  privKeyVersion: 0xbd,
-  P2SHVersion: 123,
-  hkeyPublicVersion: 0x3764724C,
-  hkeyPrivateVersion: 0x37642686,
-  genesisBlock: {
-    hash: hex('0ecfdfbf02cfea31e6ca18fde777796e52afb0618d584bf9369889c35c030000'),
-    //merkle_root: hex('3BA3EDFD7A7B12B27AC72C3E67768F617FC81BC3888A51323A9FB8AA4B1E5E4A'),
-    height: 0,
-    //nonce: 2083236893,
-    //version: 1,
-    prev_hash: buffertools.fill(new Buffer(32), 0),
-    //timestamp: 1231006505,
-    //bits: 486604799,
-  },
-  dnsSeeds: [
-    '104.131.226.147'
-  ],
-  defaultClientPort: 3764
+    name: 'livenet',
+    magic: hex('faceb5e9'),
+    addressVersion: 0x3d,
+    privKeyVersion: 0x80,
+    P2SHVersion: 0x7b,
+    hkeyPublicVersion: 0x0488b21e,
+    hkeyPrivateVersion: 0x0488ade4,
+    genesisBlock: {
+      hash: hex('0ecfdfbf02cfea31e6ca18fde777796e52afb0618d584bf9369889c35c030000'),
+      merkle_root: hex('986b677d7d6f568006a8a897efb712eefb8219efa42038ca36c479ebe93fd573'),
+      height: 0,
+      nonce: 1524017540,
+      version: 1,
+      prev_hash: buffertools.fill(new Buffer(32), 0),
+      timestamp: 1415208967,
+      bits: 0x1d00ffff,
+    },
+    dnsSeeds: [
+		'104.236.26.26'
+    ],
+    defaultClientPort: 3764
 };
 
 exports.mainnet = exports.livenet;
 
 exports.testnet = {
   name: 'testnet',
-  magic: hex('0b110907'),
-  addressVersion: 0x6f,
-  privKeyVersion: 239,
-  P2SHVersion: 196,
+  magic: hex('0x0c210a17'),
+  addressVersion: 0x41,
+  privKeyVersion: 0xef,
+  P2SHVersion: 0x7f,
   hkeyPublicVersion: 0x043587cf,
   hkeyPrivateVersion: 0x04358394,
   genesisBlock: {
